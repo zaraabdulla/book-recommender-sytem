@@ -15,8 +15,8 @@ def predict():
             age  = request.args.get('age', None)
             description  = request.args.get('description', None)
             genre = request.args.get('genre', None)
-            m = Recommendation_scratch(age, genre, description)
-            # m = Recommendation(age, genre, description)
+            # m = Recommendation_scratch(age, genre, description)
+            m = Recommendation(age, genre, description)
             reccs = m.get_recommendation()
 
             return flask.render_template('index.html', recommendation = reccs)
@@ -31,8 +31,8 @@ def predict():
             return flask.render_template('index.html', recommendation = reccs)
        
     else: 
-        m = Recommendation_scratch('','','')
-        # m = Recommendation('','','')
+        # m = Recommendation_scratch('','','')
+        m = Recommendation('','','')
         reccs = m.get_recommendation()
         return flask.render_template('index.html', recommendation = reccs)
 
