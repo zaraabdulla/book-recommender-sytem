@@ -1,0 +1,15 @@
+.test {
+    color: blue;
+}
+
+.centering {
+    max-width: 90%;
+    /* display: flex; */
+    margin: auto;
+}
+
+.set_button {
+    margin: 10px 5px;
+    width: 130px;
+}
+

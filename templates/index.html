@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- <link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/styles.css')}}"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <title>Test</title>
+</head>
+<body>
+   <!-- <h1>Testing</h1> -->
+   <section class="hero is-dark ">
+    <div class="hero-body" style="padding: 2rem 1.5rem;">
+        <h1 class="title has-text-centered">Book Recommender System</h1>
+    </div>
+  </section>
+  <!-- <p class="test">test</p> -->
+   <container class="container">
+   <section class="section">
+    <div class="columns is-vcentered">
+        <div class="column">
+            <div class="centering"> 
+                <form method="GET" action="/" class="control">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label">Age</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-narrow">
+                                <input class="input" type="number" name="age" min="1" max="120">
+                            </div>
+                        </div>
+                        <div class="field-label is-normal">
+                            <label class="label">Genre</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field is-normal">
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                <select name="genre" id="genre">
+                                    <option value="all">All genres</option>
+                                    <option value="fantasy">Fantasy</option>
+                                    <option value="science fiction">Science Fiction</option>
+                                    <option value="young adult">Young Adult</option>
+                                    <option value="mystery">Mystery</option>
+                                    <option value="thriller">Thriller</option>
+                                </select>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                        <label class="label">Description</label>
+                        </div>
+                        <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                            <textarea class="textarea" name="description" placeholder="short description / keywords of book" maxlength="500"></textarea>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        
+                        <div class="field-body">
+                          <div class="field">
+                            <div class="control" style="text-align: center;">
+                                <button class="set_button button is-dark" type="submit" name="submit" value="recco">Get Books</button>
+                                <button class="set_button button is-dark" type="submit" name="submit" value="random_recc">Random Books</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </form>
+             </div>
+        </div>
+        <div class="column" width="300">
+            <table class="table is-fullwidth is-striped is-hoverable">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Title</th> 
+                    <th>Author</th>
+                    <th>Genre(s)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th>1</th>
+                      <td>{{recommendation[0]['title']}}</td>
+                      <td>{{recommendation[0]['author']}}</td>
+                      <td>{{recommendation[0]['genre']}}</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td>{{recommendation[1]['title']}}</td>
+                        <td>{{recommendation[1]['author']}}</td>
+                        <td>{{recommendation[1]['genre']}}</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td>{{recommendation[2]['title']}}</td>
+                        <td>{{recommendation[2]['author']}}</td>
+                        <td>{{recommendation[2]['genre']}}</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td>{{recommendation[3]['title']}}</td>
+                        <td>{{recommendation[3]['author']}}</td>
+                        <td>{{recommendation[3]['genre']}}</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td>{{recommendation[4]['title']}}</td>
+                        <td>{{recommendation[4]['author']}}</td>
+                        <td>{{recommendation[4]['genre']}}</td>
+                      </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+    </section>
+</container>
+
+</body>
+</html>
