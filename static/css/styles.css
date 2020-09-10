@@ -13,3 +13,22 @@
     width: 130px;
 }
 
+.footer_style {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #7b7c7c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+ }
+
+ .link_color {
+    color: #414142;
+ }
+
+ .link_color:hover {
+    color: #191919;
+ }
+

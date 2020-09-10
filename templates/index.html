@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <!-- <link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/styles.css')}}"> -->
+    <!-- <link rel="stylesheet" href="../static/css/styles.css"> -->
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='css/styles.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <title>Test</title>
 </head>
 <body>
-   <!-- <h1>Testing</h1> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
    <section class="hero is-dark ">
     <div class="hero-body" style="padding: 2rem 1.5rem;">
         <h1 class="title has-text-centered">Book Recommender System</h1>
     </div>
   </section>
-  <!-- <p class="test">test</p> -->
+  
    <container class="container">
    <section class="section">
     <div class="columns is-vcentered">
@@ -59,7 +59,7 @@
                         <div class="field-body">
                         <div class="field">
                             <div class="control">
-                            <textarea class="textarea" name="description" placeholder="short description / keywords of book" maxlength="500"></textarea>
+                            <textarea class="textarea" name="description" placeholder="short description / keywords of book (not needed for random books)" maxlength="500"></textarea>
                             </div>
                         </div>
                         </div>
@@ -126,5 +126,13 @@
     </section>
 </container>
 
+<footer class="footer_style">
+    <p>
+        <span style="margin-right: 10px;"> Source code: </span>
+        <a href="https://github.com/zaraabdulla/book-recommender-system" class="link_color">
+            <i class="pull-right fab fa-github"></i>
+        </a>
+    </p>
+  </footer>
 </body>
 </html>
