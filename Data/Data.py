@@ -2,7 +2,7 @@
 import pandas as pd
 
 ## variable for file path relative to main.py
-file_name = "data/books.csv"
+file_name = "Data/books.csv"
 
 def read_file():
     '''
